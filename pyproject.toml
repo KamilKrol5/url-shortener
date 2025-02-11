@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "url-shortener"
+version = "0.1.0"
+description = "Minimalistyczne API do skracania URL-i"
+authors = ["Twoje Imię <twojemail@example.com>"]
+packages = [
+    { include = "url_shortener", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.1.6"
+djangorestframework = "^3.15.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+django-debug-toolbar = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

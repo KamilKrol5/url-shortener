@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  web:
+    image: url-shortener:latest
+    build: .
+    ports:
+      - "8005:8005"
+    volumes:
+      - .:/app
+      - ./start-app.sh:/app/start-app.sh
+    environment:
+      - DJANGO_SETTINGS_MODULE=url_shortener.settings
